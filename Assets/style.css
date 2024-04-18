@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+html {
+    font-family: "Roboto", sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.container {
+    text-align:center;
+    border: 5px white solid;
+    border-radius: 5px;
+    width: 525px;
+    height: 375px;
+}
+
+
+.audiocontainer {
+    left: 2px;
+}
+
+img {
+    margin-top: 15px;
+    width: 150px;
+    border-radius: 10px;
+    border: 2px white solid;
+}
+
+
+
+p {
+    font-size: larger;
+}
+
+
+
+
+button {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    background-color: black;
+    border: none;
+    margin: 5px;
+}
+
+button:hover {
+    transition-duration: 0.5s;
+    transform: scale(1.05);
+}
+
+.gitbutton {
+    background-image: url('/Images/github-logo.png');
+    background-size: contain;
+}
+
+.emailbutton {
+    background-image: url('/Images/email-icon.png');
+    background-size: contain;
+}
+
+.onlymyspace{
+    background-image: url('/Images/onlymyspace.png');
+    background-size: contain;
+}
+
+@keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+.animated-element {
+animation: slideIn 1s ease;
+}
