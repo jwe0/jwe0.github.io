@@ -1,3 +1,6 @@
+var pressed = false
+
+
 function launch_social(social) {
     if (social === "git") {
         window.open("https://github.com/jwe0"); 
@@ -21,7 +24,11 @@ function playvideo() {
 }
 
 document.addEventListener('click', function() {
-    document.body.classList.add('blur-off');
-    play();
-    playvideo();
+    if (pressed == false) {
+        pressed = true
+        document.body.classList.add('blur-off');
+        play();
+        playvideo();
+    } 
+
 });
