@@ -8,8 +8,15 @@ function launch_social(social) {
     }
 }
 
-window.onload = function play() {
+function play() {
     var audio = document.getElementById("myaudio");
     audio.volume = 0.3;
     audio.play();
 }
+
+
+document.addEventListener('click', function() {
+    // Remove the blur effect from the body
+    document.body.classList.add('blur-off');
+    play();
+});

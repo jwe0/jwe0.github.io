@@ -82,3 +82,12 @@ button:hover {
 .animated-element {
 animation: slideIn 1s ease;
 }
+
+body {
+    filter: blur(5px);
+    transition: filter 0.5s ease-in-out;
+}
+
+body.blur-off {
+    filter: none;
+}
