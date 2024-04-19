@@ -14,9 +14,14 @@ function play() {
     audio.play();
 }
 
+function playvideo() {
+    var video = document.getElementById("myvideo");
+    video.setAttribute("src", "/Video/soitmm1.mp4");
+    video.play();
+}
 
 document.addEventListener('click', function() {
-    // Remove the blur effect from the body
     document.body.classList.add('blur-off');
     play();
+    playvideo();
 });
