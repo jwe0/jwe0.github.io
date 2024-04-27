@@ -8,6 +8,8 @@ function launch_social(social) {
         window.open("mailto:joshuawebb2007@proton.me");
     } else if (social == "onlymyspace") {
         window.open("https://only-my.space/jwe0");
+    } else if(social == "blog") {
+        window.open("/Blogs");
     }
 }
 
