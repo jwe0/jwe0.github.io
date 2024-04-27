@@ -80,6 +80,12 @@ video {
     background-size: contain;
 }
 
+.blogbutton {
+    background-image: url("/Images/blog.png");
+    background-size: contain;
+}
+
+
 @keyframes slideIn {
     from {
       transform: translateY(-100%);
