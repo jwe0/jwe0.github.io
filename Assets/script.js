@@ -3,13 +3,13 @@ var pressed = false
 
 function launch_social(social) {
     if (social === "git") {
-        window.open("https://github.com/jwe0"); 
+        window.location.href = "https://github.com/jwe0"; 
     } else if (social === "mail") {
-        window.open("mailto:joshuawebb2007@proton.me");
+        window.location.href = "mailto:joshuawebb2007@proton.me";
     } else if (social == "onlymyspace") {
-        window.open("https://only-my.space/jwe0");
+        window.location.href = "https://only-my.space/jwe0";
     } else if(social == "blog") {
-        window.open("/Blogs");
+        window.location.href = "/Blogs";
     }
 }
 
