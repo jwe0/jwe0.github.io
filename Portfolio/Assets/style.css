@@ -1,0 +1,51 @@
+body {
+    background-color: black;
+    color: green;
+    font-family: Consolas,monaco,monospace; 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.display_box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px green solid;
+    width: 500px;
+    height: 500px;
+    margin-left: 5%;
+}
+
+.row2box {
+    margin-top: 5%;
+}
+
+button {
+    border-radius: 5px;
+    color: green;
+    background-color: black;
+    border: 2px green solid;
+    width: 100px;
+    height: 25px;
+}
+
+button:hover {
+    background-color: rgb(66, 66, 66);
+}
+
+@keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+.animated-element {
+    animation: slideIn 1s ease;
+}

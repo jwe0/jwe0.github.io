@@ -10,6 +10,8 @@ function launch_social(social) {
         window.location.href = "https://only-my.space/jwe0";
     } else if(social == "blog") {
         window.location.href = "/Blogs";
+    } else if(social == "portfolio") {
+        window.location.href = "/Portfolio"
     }
 }
 
@@ -32,5 +34,4 @@ document.addEventListener('click', function() {
         play();
         playvideo();
     } 
-
 });
