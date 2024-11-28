@@ -13,14 +13,7 @@ def format(content, properties=None):
         "[": "a",
         "-": "li",
     }
-    file = [
-        "<!DOCTYPE html>", 
-        "<html lang=\"en\">", 
-        "<head>", 
-        "    <meta charset=\"UTF-8\">", 
-        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
-        "    <link rel=\"stylesheet\" href=\"/Assets/styles.css\">",
-    ]
+    file = [f"<!--tags:     {','.join(properties.get('tags', []))} -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"/Assets/styles.css\">"]
     if properties:
         title = properties.get("title", "Untitled")
         file.append(f"    <title>{title}</title>")
@@ -30,13 +23,7 @@ def format(content, properties=None):
         parts = content.split("---")
         if len(parts) > 2:
             content = "---".join(parts[2:])
-
-    file.append("<body>")
-    file.append("    <header>")
-    file.append("        <h1>" + properties.get("title", "Untitled") + "</h1>")
-    file.append("    </header>")
-    file.append("    <main>")
-    file.append("        <article>")
+    file.append(f"<body>\n    <header>\n        <h1>{properties.get("title", "Untitled")}</h1>\n    </header>\n    <main>\n        <article>")
 
     in_list = False
     for line in content.splitlines():
@@ -67,12 +54,8 @@ def format(content, properties=None):
             file.append(f"            <p>{line.strip()}</p>")
     if in_list:
         file.append("            </ul>")
-    file.append("        </article>")
-    file.append("    </main>")
-    file.append("    <footer>")
-    file.append("        <p>Made by Jwe0</p>")
-    file.append("    </footer>")
-    file.append("</body>")
+    
+    file.append("        </article>\n    </main>\n    <footer>\n        <p>Made by Jwe0</p>\n    </footer>\n</body>")
     return file
 
 
@@ -101,7 +84,10 @@ def fix_index():
         posts = ["<ul>"]
         for file in os.listdir("Pages"):
             if file.endswith(".html"):
-                posts.append(f"                <li><a href=\"Pages/{file}\">{file.split('.')[0]}</a></li>")
+                with open(f"Pages/{file}", "r") as j:
+                    tags = j.read().split("\n")[0].split("tags:     ")[1].split(" -->")[0]
+                    print(tags)
+                posts.append(f"                <li><a href=\"Pages/{file}\">{file.split('.')[0]}</a> <p>{'| '.join(tags.split(', ')) if len(tags) >= 1 else tags[0] if tags else ''}</p></li>")
         posts.append("            </ul>")
         content = f.read().replace("LINKS", "\n".join(posts))
         with open("index.html", "w") as f:

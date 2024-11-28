@@ -54,8 +54,24 @@ ul {
 }
 
 li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
     margin-bottom: 0.5rem;
     list-style: disc;
+    box-shadow: 0 2px 4px rgba(2, 2, 2, 1);
+}
+
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+li p {
+    margin: 0;
 }
 
 pre {
