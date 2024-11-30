@@ -1,0 +1,49 @@
+<!--tags:     Projects -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/styles.css">
+    <title>The Silly 4</title>
+</head>
+<body>
+    <header>
+        <h1>The Silly 4</h1>
+    </header>
+    <main>
+        <article>
+            <h1>What is The Silly 4</h1>
+            <p>I am hoping that one day the Silly 4 will be a cheaper version of the Flipper zero which can set you back £135 if it's in stock from the OEM, OR being hundreds more on the used market.</p>
+            <h1>Prerequisites</h1>
+            <p>I want this device to have almost the exact same features as the Flipper zero, for example I want it to be able to send and receive IR signals, start and connect to WiFi networks, start and connect to Bluetooth devices, read and write RFID cards as well as pretend to be one and send out radio signals as well as intercept those.</p>
+            <h1>The Hardware</h1>
+            <p>In this section I will be outlining what the hardware will be.</p>
+            <h3>The board</h3>
+            <p>For the board I want a board that already has WiFi and Bluetooth built in to cut down on costs and make it smaller. For the board I have gone with the **Arduino MKR WiFi 1010** this is a fairly inexpensive board that costs £35, it has GPIO pins so I can connect the other modules easier and is also a small board.</p>
+            <h3>The modules</h3>
+            <h4>IR</h4>
+            <p>IR receivers and emitters are incredibly inexpensive and easy to use. The cost of one of these is £5.00 for 20pcs.</p>
+            <a href="https://www.amazon.co.uk/Receiver-Infrared-Lighting-Assortment-Raspberry/dp/B07TLBJR5J">Amazon</a>
+            <h4>RFID</h4>
+            <p>Similarly with IR RFID modules are incredibly cheap and easy to use. The cost of one of these is £6.00 for 1pc. I will be using the MFRC522.</p>
+            <a href="https://www.amazon.co.uk/dp/B01M28JAAZ">Amazon</a>
+            <h4>Radio</h4>
+            <p>Radio is a bit more difficult, depending on the distance I need and if I need to receive and send or just receive or send. I have gone with the CC1101 as it is fairly inexpensive setting you back about £13.00 for 1.</p>
+            <a href="https://www.amazon.co.uk/CC1101-Long-Distance-Industrial-Wireless-Transceiver/dp/B09WKGYFPV">Amazon</a>
+            <h4>UI</h4>
+            <p>This is also an important component since I need to be able to see what is going on, I could have gone with a bigger display but I feel that this device needs a smaller screen for the good form factor. I have chosen the SSD1306 since it is inexpensive for 3 only costing £13.00</p>
+            <a href="https://www.amazon.co.uk/AITRIP-Display-0-96inch-SSD1306-Raspberry-3PCS/dp/B08NDJ3S3Q">Amazon</a>
+            <h1>The Total</h1>
+            <p>Overall this project should cost around £80 for the hardware and other components like cables.</p>
+            <h1>Expectations</h1>
+            <p>I expect this to perform okay when compared to a Flipper zero, it is very near the price of the flipper zero so for some it might be easier just to get a Flipper, the Flipper also has an easier to use display and would be built better. I hope my device will do what I need it to do.</p>
+        </article>
+    </main>
+    <footer>
+        <a href="https://github.com/jwe0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <p>Made by Jwe0</p>
+    </footer>
+</body>
