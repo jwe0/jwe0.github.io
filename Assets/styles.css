@@ -104,3 +104,12 @@ a {
     color: #58a6ff; 
     text-decoration: none;
 }
+
+img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

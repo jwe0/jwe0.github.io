@@ -32,6 +32,24 @@
             <p>4. I find the issues using GitHub</p>
             <h3>Outro</h3>
             <p>This was a fun little room teaching penetration testers how important OPSEC is and how 1 small slip up can unravel your entire operation.</p>
+            <h2>Day 2.</h2>
+            <h3>Outline</h3>
+            <p>We as the SOC have been alerted of activity on our network and it is our job to find the cause of the issue and what has caused it.</p>
+            <h3>The attack</h3>
+            <p>First we navigate to the elastic portal given to us by THM and go to the discover tab</p>
+            <img src="/Assets/Images/Pasted image 20241202201803.png">
+            <p>We are informed that the activity occurred on Dec 1st, 2024, between 0900 and 0930 so we set our time window to this and get 21 hits. The data at the moment is not very easy to read and we need to format it.</p>
+            <p>We apply filters to get the date, host, username, event type, command and the event outcome which allows us to see that an attacker has executed a powershell script on our system which immediately raises red flags for me.</p>
+            <p>We filter for authentication attempts and roll back to the 29th to be presented with a lot of access attempts that shows us an attempted brute force attack, we filter out our IP and are left with an attacker that successfully authenticated with a brute force attack.</p>
+            <p>However it seems this person gained access to the ADM-01 account with weak credentials that they then changed and forced an update for by using the powershell script that reboots the system.</p>
+            <h3>Questions</h3>
+            <p>1. The account with attempted login attempts is the account with the most access attempts</p>
+            <p>2. We filter to find the amount</p>
+            <p>3. We filter to find the IP</p>
+            <p>4. We filter to find the date</p>
+            <p>5. We decode the string in the powershell script</p>
+            <h3>Outro</h3>
+            <p>Overall this was a fun room that gives a basic insight into what SOC staff deal with and can allow people to dip their toes into this subject without fully committing yet.</p>
         </article>
     </main>
     <footer>

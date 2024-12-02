@@ -1,6 +1,13 @@
 import os
 import yaml
 
+def retrieve_img(file):
+    with open("/home/{}/Documents/Obsidian Vault/{}".format(os.getlogin(), file), "rb") as f:
+        bytes = f.read()
+    with open("Assets/Images/{}".format(file), "wb") as f:
+        f.write(bytes)
+    return f"/Assets/Images/{file}"
+
 def format(content, properties=None):
     rules = {
         "######": "h6",
@@ -24,7 +31,6 @@ def format(content, properties=None):
         if len(parts) > 2:
             content = "---".join(parts[2:])
     file.append(f"<body>\n    <header>\n        <h1>{properties.get("title", "Untitled")}</h1>\n    </header>\n    <main>\n        <article>")
-
     in_list = False
     for line in content.splitlines():
         matched = False
@@ -45,6 +51,13 @@ def format(content, properties=None):
                     file.append("            </ul>")
                     in_list = False
                 file.append(f"            <{rules[rule]}>{line[len(rule):].strip()}</{rules[rule]}>")
+                matched = True
+                break
+            elif "![[Pasted image " in line:
+                filex = retrieve_img(line.split("![[")[1].split("]]")[0])
+                img_tag = f"            <img src=\"{filex}\">"
+                if img_tag not in file:
+                    file.append(img_tag)
                 matched = True
                 break
         if not matched and line.strip():
