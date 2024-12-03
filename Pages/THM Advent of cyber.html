@@ -50,6 +50,24 @@
             <p>5. We decode the string in the powershell script</p>
             <h3>Outro</h3>
             <p>Overall this was a fun room that gives a basic insight into what SOC staff deal with and can allow people to dip their toes into this subject without fully committing yet.</p>
+            <h2>Day 3.</h2>
+            <h3>Outline</h3>
+            <p>We as penetration testers are given a Blue and red team task, we are told to investigate what has happened and discover the source and learn how RCE exploits can happen due to unsanitized file uploads.</p>
+            <h3>The attack</h3>
+            <h4>Operation Blue</h4>
+            <p>Similarly to yesterday we are using Elastic to check logs and today we are searching through Apache2 logs. We change our collection of logs to "wareville-rails", it shows us no results but that is because by default we are searching from the last 15 minutes. We change the time frame, starting at "**October 1 2024 00:00:00**" and going to "**October 1 23:59:59**".</p>
+            <p>We discover someone has sent requests and a file called "shell.php" has been accessed, this seems to be a web shell of some kind uploaded via an insecure file upload</p>
+            <p>We filter by the "shell.php" and get 11 hits.</p>
+            <h3>Operation Red</h3>
+            <p>In this section we are learning how web shells work, how file uploads can be exploited and how we can do so ourselves.</p>
+            <p>We navigate to "frostypines.thm" and are met with a website, we see a login tab and click on it. We do not have the credentials but we can guess using default credentials like "admin", after gaining access we find an admin panel at "/admin". We can create a new room which I do and for the image I upload a simple PHP RCE file. We go back to the normal website. navigate to the rooms, open the image in a new tab and voila we have a command bar we can use to run commands.</p>
+            <p>We run "ls" to find that the flag.txt is in the cwd so I "cat flag.txt" to get the flag file.</p>
+            <h3>Questions</h3>
+            <p>1. We find this in the logs when filtering for "shell.php" in the message</p>
+            <p>2. We find this in the logs when we filter for IPs</p>
+            <p>3. We find this after successfully uploading an RCE file and gaining a web shell</p>
+            <h3>Outro</h3>
+            <p>Overall I really enjoyed this room, it included some aspects from yesterdays room and it also taught us what web shells are and how they work.</p>
         </article>
     </main>
     <footer>
