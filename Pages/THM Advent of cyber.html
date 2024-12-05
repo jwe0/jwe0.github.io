@@ -83,6 +83,17 @@
             <p>6. Found in that file</p>
             <h3>Outro</h3>
             <p>Overall this room was a lot more difficult than other rooms, it posed a greater challenge but was also one of my favorite rooms because of my sense of accomplishment.</p>
+            <h2>Day 5.</h2>
+            <h3>Outline</h3>
+            <p>Software was finishing up some software and on his way home he sees a young boy looking sad, he asks "What would you like for Christmas?" the boy responded "I wish for a teddy bear, but I know that my family can't afford one.". This sparked an idea in Software's head, what if he made an app where everyone could share ideas and the mayor could help make them come true.</p>
+            <p>Them mayor immediately endorsed this idea, even chipping in to help but through the haste they left bugs in the software that we are going to find.</p>
+            <h3>The attack</h3>
+            <p>Today we are looking at XML and XXS vulnerabilities where entities can be exploited to pull down sensitives files that the parser will show.</p>
+            <p>When we navigate to the web page we are met with the wish list, we add an item to our cart and view our cart by proceeding to payment, we intercept the product.php request to find XML data being transmitted, we edit the payload to get the "/etc/hosts" file and we see that we can access that file with this showing that we can use an XXS exploit.</p>
+            <p>We craft a payload to get the wishes file we couldn't access earlier.</p>
+            <h3>Answers</h3>
+            <p>1. We find this by bruteforcing the wishlist path</p>
+            <p>2. We find this in the CHANGELOG path</p>
         </article>
     </main>
     <footer>
