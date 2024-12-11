@@ -127,8 +127,19 @@
             <p>We will be performing a risk assessment on given statements.</p>
             <h3>Answers</h3>
             <p>1. Found by completing the assesment</p>
-            <h3>Outline</h3>
+            <h3>Outro</h3>
             <p>This was a very small room that just briefly went over GRC, just enough to understand.</p>
+            <h2>Day 10.</h2>
+            <h3>Outline</h3>
+            <p>In today's attack we are talking about phishing and file macros, understanding what both of them are and how macros can lead to attacks.</p>
+            <h3>The attack</h3>
+            <p>First we use Metasploit msfconsole to generate a malicious word macro file that will allow us a tcp reverse shell onto a windows system.</p>
+            <p>We log into the mail portal and compose an email to `marta@socmas.thm`, we attach the payload as a file and rename it to something more convincing like "receipt.docm" or "invoice.docm".</p>
+            <p>We listen using msfconsole `multi/handler` on the port we specified for the exploit, from the point we send the email we must wait for the target to execute the payload on their system.</p>
+            <img src="/Assets/Images/Pasted image 20241211154620.png">
+            <p>Yes! From this point we navigate to the administrators desktop and retrieve the flag.</p>
+            <h3>Outro</h3>
+            <p>Overall I loved this room, i'm a big fan of offensive security especially exploitation and enumeration. This room outlines the basics of meterpreter and how to create exploits</p>
         </article>
     </main>
     <footer>
