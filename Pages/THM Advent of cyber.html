@@ -140,6 +140,21 @@
             <p>Yes! From this point we navigate to the administrators desktop and retrieve the flag.</p>
             <h3>Outro</h3>
             <p>Overall I loved this room, i'm a big fan of offensive security especially exploitation and enumeration. This room outlines the basics of meterpreter and how to create exploits</p>
+            <h3>Day 11.</h3>
+            <h3>Outline</h3>
+            <p>Today we are learning about exploits in wireless technologies.</p>
+            <h3>The attack</h3>
+            <p>First we connect to the ssh server given to us, we find the wireless points available to us using the iw dev command</p>
+            <img src="/Assets/Images/Pasted image 20241212170542.png">
+            <p>We then scan for nearby devices.</p>
+            <img src="/Assets/Images/Pasted image 20241212170622.png">
+            <p>We change wlan2 to monitor mode and use airodump-ng to monitor the network. We send deauth packets to the network to force the client to have to reconnect to the network allowing us to get a handshake.</p>
+            <p>We use airocrack-ng to bruteforce the password.</p>
+            <h3>Answers</h3>
+            <p>1. Found using iw dev</p>
+            <p>2. Same as Q1</p>
+            <p>3. Same as Q2</p>
+            <p>4. Same as Q3</p>
         </article>
     </main>
     <footer>
