@@ -194,6 +194,18 @@
             <p>3. Found in the powershell logs</p>
             <p>4. Found in event logs</p>
             <p>5. Found in event logs</p>
+            <h2>Day 16.</h2>
+            <h3>Outline</h3>
+            <p>Today we are going over Microsoft Azure. Why Azure is used, the authentication services and the cloud shell</p>
+            <h3>The attack</h3>
+            <p>We sign into the Azure lab and launch the Azure CLI.</p>
+            <p>We run `az ad signed-in-user show` to show the signed in user. We list the users with `az ad user list`.</p>
+            <p>We list the groups and discover a Secret Recovery Group that we log into.</p>
+            <p>We list the key vaults with `az keyvault secret list --vault-name warevillesecrets`</p>
+            <h3>Answers</h3>
+            <p>1. Found by listing the groups</p>
+            <p>2. Found by listing the groups</p>
+            <p>3. Found using the groups</p>
         </article>
     </main>
     <footer>
