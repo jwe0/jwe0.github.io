@@ -248,6 +248,18 @@
             <p>3. Same as 1</p>
             <p>4. Same as 1</p>
             <p>5. We get the key in a request and learn we need to use AES ECB, we then find the encrypted string and decrypt it using cyberchef</p>
+            <h2>Day 21.</h2>
+            <h3>Outline</h3>
+            <p>Today we are doing reverse engineering, we will be understanding the structure of a binary file, the difference between disassembly and decompiling, multi stage binaries and reversing multi stage binaries.</p>
+            <h3>The attack</h3>
+            <p>We will be decompiling 2 .net binaries. The first we will need to use PE studio since it is a windows executable to get key information about this application. We then use ILspy to decompile the code into a more readable format.</p>
+            <p>We now will be doing this on the `WarevilleApp` file. First we use PE studio to get key info from the app, this turns out few results so I decompile the app using ILSpy, I find a lot of key information using this.</p>
+            <h3>Answers</h3>
+            <p>1. Found by decompiling `WarevilleApp.exe`</p>
+            <p>2. Same as 1</p>
+            <p>3. Same as 1</p>
+            <p>4. Found by downloading the malware and using ILSpy to decompile it</p>
+            <p>5. Same as 4</p>
         </article>
     </main>
     <footer>
