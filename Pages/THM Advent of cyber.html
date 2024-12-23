@@ -260,6 +260,15 @@
             <p>3. Same as 1</p>
             <p>4. Found by downloading the malware and using ILSpy to decompile it</p>
             <p>5. Same as 4</p>
+            <h2>Day 22.</h2>
+            <h3>Outline</h3>
+            <p>Today we learn about Kubernetes, DFIR and log analysis.</p>
+            <h3>The attack</h3>
+            <p>We start a K8S with `minikube start` we then wait about 3 minutes before listing the pods with `kubectl get pods -n wareville`.</p>
+            <p>After starting the cluster and ensuring all pods are up we can enter a pod shell with `kubectl exec -n wareville naughty-or-nice -it -- /bin/bash`, then we check the apache log with `cat /var/log/apache2/access.log` for me I didn't have anything so I checked the error logs.</p>
+            <p>We then check the docker ps and run an ls with `docker exec ID ls -al /var/log` we find logs that are stored in `/home/ubuntu/dfir_artefacts/docker-registry-logs/log` which we sort with `cat docker-registry-logs.log | grep "HEAD" | cut -d ' ' -f 1` so we can see all the IPs that connected</p>
+            <h3>Answers</h3>
+            <p>1. All found by checking logs</p>
         </article>
     </main>
     <footer>
