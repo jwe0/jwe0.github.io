@@ -269,6 +269,15 @@
             <p>We then check the docker ps and run an ls with `docker exec ID ls -al /var/log` we find logs that are stored in `/home/ubuntu/dfir_artefacts/docker-registry-logs/log` which we sort with `cat docker-registry-logs.log | grep "HEAD" | cut -d ' ' -f 1` so we can see all the IPs that connected</p>
             <h3>Answers</h3>
             <p>1. All found by checking logs</p>
+            <h2>Day 23.</h2>
+            <h3>Outline</h3>
+            <p>Today we are doing hash cracking as personal favorite attack of mine.</p>
+            <h3>The attack</h3>
+            <p>First we use john the ripper to crack the hash in hash1.txt.</p>
+            <p>Now we use `pdf2john.pl` to convert the pdf file to a hash and then crack it.</p>
+            <h3>Answers</h3>
+            <p>1. Found by cracking hash1.txt</p>
+            <p>2. Found by cracking the pdf file</p>
         </article>
     </main>
     <footer>
